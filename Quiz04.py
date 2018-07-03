@@ -74,9 +74,9 @@ def GramSchmidt(A):
     v[i] = A[i]
   for i in range(n):
     R[i][i] = norm(v[i])
-    # Taking infinity norm of R
+    # Taking two norm
     Q[i] = normalize(v[i])
-    # normalizing with respect to infinity norm
+    # normalizing 
     for j in range(i + 1, n):
       R[i][j] = dot(Q[i],v[j])
       # dot product 
