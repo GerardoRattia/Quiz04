@@ -6,22 +6,22 @@ def ScaVecMulti(scalar, vector01):
   """
     This function takes a vector an a scalar as it’s arguments, and then it multiplies each element of the vector by the scalar, updating each element of the vector. 
   """  
-  vector = []
+  vector = [] #brackets for the answer 
   for i in range(len(vector01)):
     total = 0
-    total += vector01[i] * scalar
-    vector.append(total)
+    total += vector01[i] * scalar #multiplies each element of the vector by the scalar
+    vector.append(total) #put the total inside the new vector
   return vector
 
 def VecSub(vector01, vector02):
   """
     This function takes two vectors as its arguments, then it updates each of the elements inside the vector by subtracting them, returning a new updated vector.
   """
-  VecSub = []
+  VecSub = [] #brackets for the answer 
   for i in range(len(vector01)):
-    total = 0
-    total += vector01[i] - vector02[i]
-    VecSub.append(total)
+    total = 0 
+    total += vector01[i] - vector02[i] #substract each element individually from each vector
+    VecSub.append(total) #adds the total in the brackets
   return VecSub
 
 def dot(vector01, vector02):
@@ -29,9 +29,9 @@ def dot(vector01, vector02):
     This function takes two vectors as its arguments. It multiplies each element of each vector before adding them, and returning the dot product of two 
     vectors as a scalar.
   """
-  total = 0
+  total = 0 #perform an addition 
   for i in range(len(vector01)):
-    total += vector01[i] * vector02[i]
+    total += vector01[i] * vector02[i] #multiplies each element of the vector by each other before adding them to return a scalar
   return total
 
 
@@ -41,8 +41,8 @@ def norm(vector):
   """
   total = 0
   for i in range(len(vector)):
-    total += vector[i] ** 2
-  total = total**(1/2)
+    total += vector[i] ** 2 #squares each element of the vector
+  total = total**(1/2) #takes the sqaure root of the sum
   return total
 
 def normalize(vector):
@@ -52,7 +52,7 @@ def normalize(vector):
   normalizer = []
   for i in range(len(vector)):
     total = 0
-    total += vector[i] * (1 / norm(vector))
+    total += vector[i] * (1 / norm(vector)) #the vector its divided by the two norm
     normalizer.append(total)
   return normalizer  
 
